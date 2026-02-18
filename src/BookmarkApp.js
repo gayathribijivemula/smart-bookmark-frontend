@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Use your Railway backend public URL here
-const API = 'https://smart-bookmark-backend-production.up.railway.app/bookmarks';
+const API = process.env.REACT_APP_BACKEND_URL + '/bookmarks';
+
 
 function BookmarkApp() {
   const [bookmarks, setBookmarks] = useState([]);
